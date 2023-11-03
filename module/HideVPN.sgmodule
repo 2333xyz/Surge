@@ -1,0 +1,7 @@
+#!name=Hide VPN Icon
+#!desc=隐藏VPN图标
+
+[General]
+hide-vpn-icon = true
+# 另一种方法
+#tun-excluded-routes = 0.0.0.1/31
