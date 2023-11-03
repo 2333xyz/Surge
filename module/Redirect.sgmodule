@@ -1,0 +1,13 @@
+#!name=Redirect
+#!desc=谷歌、维基百科重定向
+
+[URL Rewrite]
+# 谷歌重定向
+^https?://(www.)?g.cn https://www.google.com 302
+^https?://(www.)?google.cn https://www.google.com 302
+# 维基百科重定向
+^https:\/\/zh\.m\.wikipedia\.org\/(zh-hans|zh)\/(.*) https://zh.m.wikipedia.org/zh-cn/$2 302
+^https:\/\/zh\.wikipedia\.org\/(zh-hans|zh)\/(.*) https://zh.wikipedia.org/zh-cn/$2 302
+
+[MITM]
+hostname = %APPEND% www.g.cn, www.google.cn, zh.m.wikipedia.org, zh.wikipedia.org
