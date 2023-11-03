@@ -1,0 +1,3 @@
+# 一些vps的ip无法在youtube评论，需要套warp分流
+# 需要先MitM：youtubei.googleapis.com
+URL-REGEX,^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/comment\/create_comment
