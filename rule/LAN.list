@@ -1,0 +1,19 @@
+# 来源是surge的内置LAN规则，删掉了 IP-CIDR 0.0.0.0/8 这一条，原因如下
+# github在没加规则的情况下可能会被dns污染到0.0.0.0，然后匹配到内置规则LAN，虽然策略是direct，但surge备注显示DIRECT policy with 0.0.0.0, use REJECT instead，最后是被reject了，会导致连不上github
+# 很多懒人配置里有下面这条，经常被放在lan的上面。实际上这条规则是用于AdGuard对被屏蔽域名返回 0.0.0.0 DNS结果，应该放在lan或geoip后面（即使把策略改为direct，最后依旧会被reject，所以如果你用的是surge内置的LAN规则，就没必要再加下面这条了）
+#Surge的自动REJECT保护丢包,防止应用循环请求
+#IP-CIDR,0.0.0.0/32,REJECT,no-resolve
+
+DOMAIN-SUFFIX,local
+IP-CIDR,10.0.0.0/8
+IP-CIDR,100.64.0.0/10
+IP-CIDR,127.0.0.0/8
+IP-CIDR,172.16.0.0/12
+IP-CIDR,169.254.0.0/16
+IP-CIDR,192.0.0.0/24
+IP-CIDR,192.0.2.0/24
+IP-CIDR,192.168.0.0/16
+IP-CIDR,224.0.0.0/4
+IP-CIDR6,::1/128
+IP-CIDR6,fc00::/7
+IP-CIDR6,fe80::/10
