@@ -1,27 +1,22 @@
 #!name=RedPoint
 #!desc=去掉部分App内的红点
-# 搭配模块需要先安装script hub：https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.surge.sgmodule
 
 [URL Rewrite]
 # 菜鸟底部发现红点+顶部地址加载
-# 搭配模块：http://script.hub/file/_start_/https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cainiao.snippet/_end_/cainiao.sgmodule?n=%E8%8F%9C%E9%B8%9F%2B%E5%8E%BB%E5%B9%BF%E5%91%8A&type=qx-rewrite&target=surge-module&x=amdc
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.tabbar\.marketing\.get\.cn\/1\.0 - reject
 #^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.cncommunity\.station\.recommend\.index\.query\.cn\/1\.0 - reject
 
 # 微博底部首页、超话、消息红点
-# 搭配模块：http://script.hub/file/_start_/https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/weibo.snippet/_end_/weibo.sgmodule?n=%E5%BE%AE%E5%8D%9A%2B%E5%8E%BB%E5%B9%BF%E5%91%8A&type=qx-rewrite&target=surge-module
 ^https:\/\/api\.weibo\.cn\/2\/remind\/group_unread - reject
 ^https:\/\/api\.weibo\.cn\/2\/remind\/unread_count - reject
 
 # b站动态、校园红点
-# 建议搭配：https://github.com/BiliUniverse/Universe
 ^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.dynamic\.v1\.Dynamic\/DynRed - reject
 ^https?:\/\/app\.bilibili\.com\/bilibili\.app\.dynamic\.v2\.Dynamic\/CampusRedDot - reject
 ^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.dynamic\.v2\.Dynamic\/CampusRedDot - reject
 ^https?:\/\/app\.bilibili\.com\/bilibili\.app\.dynamic\.v1\.Dynamic\/DynRed - reject
 
-# 网易云关注红点（iPad版为朋友红点）、侧边栏消息中心
-# 搭配模块：https://raw.githubusercontent.com/Keywos/rule/main/module/wyy.sgmodule
+# 网易云关注红点（iPad版为朋友红点）（没有关注的人就不会有红点）、侧边栏消息中心
 ^https?:\/\/interface3\.music\.ntes53\.netease\.com\/eapi\/pl\/count\?_nmclfl=1 - reject
 ^https?:\/\/entry\.interface3\.music\.ntes53\.netease\.com\/eapi\/pl\/count\?_nmclfl=1 - reject
 ^https?:\/\/interface3\.music\.163\.com\/eapi\/pl\/count - reject
@@ -29,11 +24,10 @@
 ^https?:\/\/interface3\.music\.163\.com\/eapi\/song\/steal\/unread\/redpoint\?_nmclfl=1 - reject
 
 # 知乎关注红点
-# 搭配模块：http://script.hub/file/_start_/https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/zhihu.snippet/_end_/zhihu.sgmodule?n=%E7%9F%A5%E4%B9%8E%2B%E5%8E%BB%E5%B9%BF%E5%91%8A&type=qx-rewrite&target=surge-module
 ^https:\/\/api\.zhihu\.com\/moments\/tab_v2\?ab_param=only_dynamic&feed_type=recommend - reject
 ^https:\/\/api\.zhihu\.com\/moments\/tab_v2\?feed_type=recommend - reject
 
-# 淘宝逛逛红点（点进去能关掉）
+# 淘宝逛逛红点（点进去-左上角头像-个人主页-设置-关闭逛逛消息通知）（或者可以尝试切换地区为全球）
 
 [MITM]
 hostname = %APPEND% cn-acs.m.cainiao.com, api.weibo.cn, grpc.biliapi.net, app.bilibili.com, api.zhihu.com, entry.interface3.music.ntes53.netease.com, interface3.music.ntes53.netease.com, interface3.music.163.com
