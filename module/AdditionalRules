@@ -1,0 +1,52 @@
+#!name=[ 附加规则 ]
+#!desc=Additional Rules
+
+[Rule]
+
+# [Ruleset DIRECT]
+DOMAIN-SUFFIX,cmpassport.com,DIRECT //中国移动一键登录
+DOMAIN-SUFFIX,aliyuncs.com,DIRECT //阿里云扫码登录
+
+# [Ruleset REJECT]
+DOMAIN,abtest.jegotrip.com.cn,REJECT //DNS Failed
+DOMAIN,ipv6.music.163.com,REJECT //DNS Failed
+
+# [Ruleset REJECT-DROP] 一些暴力请求（drop效果不好的话也可以考虑放行）
+DOMAIN,hd2.3g.qq.com,REJECT-DROP
+DOMAIN,sq.bls.mdt.qq.com,REJECT-DROP
+DOMAIN,oth.eve.mdt.qq.com,REJECT-DROP
+DOMAIN,ulogs.umeng.com,REJECT-DROP
+DOMAIN,ulogs.umengcloud.com,REJECT-DROP
+DOMAIN,errlog.umeng.com,REJECT-DROP
+DOMAIN,stats.jpush.cn,REJECT-DROP
+DOMAIN,px.effirst.com,REJECT-DROP
+DOMAIN,applog.uc.cn,REJECT-DROP
+DOMAIN,metrics-picture.d.meituan.net,REJECT-DROP
+DOMAIN,errnewlog.umeng.com,REJECT-DROP
+DOMAIN,dataflow.biliapi.com,REJECT-DROP
+DOMAIN,sugar.zhihu.com,REJECT-DROP
+DOMAIN,waapdg.jd.com,REJECT-DROP
+DOMAIN,tianshu.gtimg.cn,REJECT-DROP
+DOMAIN,api.statsig.com,REJECT-DROP
+
+# [Ruleset FINAL] 关于DNS泄漏：正确的做法是减少走Final，或者使用某些通过境外服务器进行IP分流的小众doh可以解决，但会增加延迟
+DOMAIN,analytics.twitter.com,FINAL //推特链接跳转
+DOMAIN-SUFFIX,dnsleak.linkv.site
+DOMAIN-SUFFIX,dnsleaktest.com
+DOMAIN-SUFFIX,dnsleak.com
+DOMAIN-SUFFIX,expressvpn.com
+DOMAIN-SUFFIX,nordvpn.com
+DOMAIN-SUFFIX,surfshark.com
+DOMAIN-SUFFIX,ipleak.net
+DOMAIN-SUFFIX,perfect-privacy.com
+DOMAIN-SUFFIX,browserleaks.com
+DOMAIN-SUFFIX,browserleaks.org
+DOMAIN-SUFFIX,vpnunlimited.com
+DOMAIN-SUFFIX,whoer.net
+DOMAIN-SUFFIX,whrq.net
+DOMAIN-SUFFIX,astrill.com
+DOMAIN-SUFFIX,astrill.org
+DOMAIN-SUFFIX,dnsleak.asn247.net
+DOMAIN-SUFFIX,surfshark.com
+DOMAIN-SUFFIX,surfsharkdns.com
+DOMAIN-SUFFIX,browserleaks.net
