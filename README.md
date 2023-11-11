@@ -9,6 +9,6 @@
 
 [生成正则](https://www.icloud.com/shortcuts/d13066413c7140d4a23a445f23049ac8)：根据链接快速生成正则表达式
 
-[Surge截取](https://www.icloud.com/shortcuts/2d0afb94f85748fb8782ce4b82846e66)：一键打开/关闭抓取流量和MitM All Hostnames（最新版已不再需要）
+～[Surge截取](https://www.icloud.com/shortcuts/2d0afb94f85748fb8782ce4b82846e66)：一键打开/关闭抓取流量和MitM All Hostnames（最新版已不再需要）～
 ***
 
