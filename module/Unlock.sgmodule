@@ -1,7 +1,7 @@
 #!name=App解锁合集
 #!desc=解锁部分软件的会员或功能
 # 同时去除百度网盘、彩云天气部分广告。资源均来自互联网。
-# 爱企查、百度文库、美图秀秀、iScreen、彩云天气、百度网盘、WPS、Spotify、墨迹天气
+# 包括的App：爱企查、百度文库、美图秀秀、iScreen、彩云天气、百度网盘、WPS、Spotify、墨迹天气
 
 [Script]
 爱企查vip=type=http-response,pattern=^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax,requires-body=1,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/aiqicha.js
