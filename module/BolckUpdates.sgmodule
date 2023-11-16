@@ -1,5 +1,6 @@
 #!name=屏蔽iOS系统更新
 #!desc=Block iOS System Updates
+# 其实可以通过屏幕使用时间进入设置的通知，关闭标记就不会有红点了，但是重启手机后会恢复。
 
 [Rule]
 DOMAIN,mesu.apple.com,REJECT
