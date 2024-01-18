@@ -14,9 +14,6 @@ URL-REGEX,^https:\/\/dns\.google\/resolve\?name=app\.bilibili\.com,REJECT
 AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (DOMAIN,amdc.m.taobao.com,extended-matching)),REJECT-DROP
 
 [URL Rewrite]
-# b站动态红点
-^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.dynamic\.v1\.Dynamic\/DynRed - reject
-^https?:\/\/app\.bilibili\.com\/bilibili\.app\.dynamic\.v1\.Dynamic\/DynRed - reject
 # 菜鸟底部发现红点+顶部地址
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.tabbar\.marketing\.get\.cn\/1\.0 - reject
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.cncommunity\.station\.recommend\.index\.query\.cn\/1\.0 - reject
@@ -89,14 +86,15 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (DOMAIN,amdc.m.taobao.com
 ^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 - reject
 
 [Map Local]
+# b站动态红点
+^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.dynamic\.v1\.Dynamic\/DynRed data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/app\.bilibili\.com\/bilibili\.app\.dynamic\.v1\.Dynamic\/DynRed data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # 易校园
 ^https:\/\/compus\.xiaofubao\.com\/compus\/advertising\/getStartupAdvertising data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/compus\.xiaofubao\.com\/compus\/advertising\/getAdvertisingMap data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # 志愿汇开屏、更新弹窗
 ^https?:\/\/ipv6\.zyh365\.com\/index4\/startup data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/apiipv6\.zyh365\.com\/api\/comm\/appversion_ios\.do data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-# 网易云音乐HD热搜
-#^https:\/\/interface3\.music\.163\.com\/eapi\/search\/hot data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # 全民K歌开屏
 ^https?:\/\/y\.gtimg\.cn\/music\/common\/\/upload\/kg_ad\/.+?\d{3,4}x\d{4} data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # 浙里办开屏
