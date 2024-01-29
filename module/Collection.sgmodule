@@ -2,9 +2,6 @@
 #!desc=去广告、去红点、重定向
 # 部分来源：https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf & https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf & https://raw.githubusercontent.com/app2smile/rules/master/module/adsense.sgmodule & https://raw.githubusercontent.com/Keywos/rule/main/module/Cainiao.sgmodule & https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list & https://raw.githubusercontent.com/kokoryh/Script/master/Surge/module/main.sgmodule & https://github.com/ddgksf2013/Scripts/raw/master/pixivAds.js & https://t.me/zhetengsha/868 & https://raw.githubusercontent.com/Keywos/rule/main/module/baiduIndex.sgmodule & https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
 
-[General]
-force-http-engine-hosts = %APPEND% gql.reddit.com, gql-fed.reddit.com
-
 [Rule]
 # 知到开屏
 DOMAIN,app-advertise.zhihuishu.com,REJECT
