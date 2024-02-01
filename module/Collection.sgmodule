@@ -81,6 +81,8 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (DOMAIN,amdc.m.taobao.com
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome - reject
 # 云闪付
 ^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 - reject
+# 得物
+^https:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement - reject
 
 [Map Local]
 # b站动态红点
@@ -125,4 +127,4 @@ Reddit = type=http-response,pattern=^https?:\/\/gql(-fed)?\.reddit\.com,requires
 pixivAds_18 = type=http-response,pattern=^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token),requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/pixivAds.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% compus.xiaofubao.com, ipv6.zyh365.com, y.gtimg.cn, portal.zjzwfw.gov.cn, cn-acs.m.cainiao.com, api.weibo.cn, api.zhihu.com, www.g.cn, www.google.cn, zh.m.wikipedia.org, api-new.app.acfun.cn, acs.m.taobao.com, appwk.baidu.com, *.chelaile.net.cn, *.chelaileapp.cn, learn.chaoxing.com, app.hbooker.com, peisongapi.meituan.com, img.meituan.net, s3plus.meituan.net, flowplus.meituan.net, p*.meituan.net, api.pinduoduo.com, api.yangkeduo.com, otheve.beacon.qq.com, client.app.coc.10086.cn, api.m.jd.com, bdsp-x.jd.com, dsp-x.jd.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, gw.alicdn.com, wallet.95516.com, wap.js.10086.cn, clientaccess.10086.cn, gql.reddit.com, home.mi.com, api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com, open.e.kuaishou.com, ad.12306.cn, oauth.secure.pixiv.net, gql-fed.reddit.com, m.baidu.com, www.baidu.com, grpc.biliapi.net, app.bilibili.com, zh.wikipedia.org, apiipv6.zyh365.com, heic.alicdn.com, guide-acs.m.taobao.com, dns.google
+hostname = %APPEND% compus.xiaofubao.com, ipv6.zyh365.com, y.gtimg.cn, portal.zjzwfw.gov.cn, cn-acs.m.cainiao.com, api.weibo.cn, api.zhihu.com, www.g.cn, www.google.cn, zh.m.wikipedia.org, api-new.app.acfun.cn, acs.m.taobao.com, appwk.baidu.com, *.chelaile.net.cn, *.chelaileapp.cn, learn.chaoxing.com, app.hbooker.com, peisongapi.meituan.com, img.meituan.net, s3plus.meituan.net, flowplus.meituan.net, p*.meituan.net, api.pinduoduo.com, api.yangkeduo.com, otheve.beacon.qq.com, client.app.coc.10086.cn, api.m.jd.com, bdsp-x.jd.com, dsp-x.jd.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, gw.alicdn.com, wallet.95516.com, wap.js.10086.cn, clientaccess.10086.cn, gql.reddit.com, home.mi.com, api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com, open.e.kuaishou.com, ad.12306.cn, oauth.secure.pixiv.net, gql-fed.reddit.com, m.baidu.com, www.baidu.com, grpc.biliapi.net, app.bilibili.com, zh.wikipedia.org, apiipv6.zyh365.com, heic.alicdn.com, guide-acs.m.taobao.com, dns.google, app.dewu.com
