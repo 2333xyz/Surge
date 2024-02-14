@@ -1,7 +1,0 @@
-#!name=🔗 Shortcut Module
-#!desc=易班开屏广告
-# 易班把开屏广告藏在了m.yiban.cn这个域名里且禁止mitm，如果直接reject会影响跟多功能，因此可以考虑使用surge的快捷指令来实现去广告（非常不优雅）
-# 使用方法：安装后先取消勾选，然后在快捷指令里设置先启用模块-打开app-等待1秒钟-再禁用模块。最后把快捷指令添加到主屏幕，并更改为和app一样的图标，替换掉原先app的位置。图标可以在这里找：https://www.icloud.com/shortcuts/32509d8d190946b8890f68874eb88ab6
-
-[Rule]
-DOMAIN, m.yiban.cn, REJECT-NO-DROP
