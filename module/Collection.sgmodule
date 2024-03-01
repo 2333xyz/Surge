@@ -4,7 +4,7 @@
 
 [Rule]
 # 知到开屏
-DOMAIN,app-advertise.zhihuishu.com,REJECT
+;DOMAIN,app-advertise.zhihuishu.com,REJECT
 # b站谷歌dns请求
 URL-REGEX,^https:\/\/dns\.google\/resolve\?name=app\.bilibili\.com,REJECT
 # 高德/菜鸟 必须屏蔽
@@ -15,7 +15,7 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (DOMAIN,amdc.m.taobao.com
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.tabbar\.marketing\.get\.cn\/1\.0 - reject
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.cncommunity\.station\.recommend\.index\.query\.cn\/1\.0 - reject
 # 知到更新弹窗
-^http:\/\/base-config\.zhihuishu\.com\/app_2c\/common\/getIosStoreVersion - reject
+;^http:\/\/base-config\.zhihuishu\.com\/app_2c\/common\/getIosStoreVersion - reject
 # 微博底部首页、超话、消息红点
 ^https:\/\/api\.weibo\.cn\/2\/remind\/group_unread - reject
 ^https:\/\/api\.weibo\.cn\/2\/remind\/unread_count - reject
