@@ -11,14 +11,6 @@ URL-REGEX,^https:\/\/dns\.google\/resolve\?name=app\.bilibili\.com,REJECT
 AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (DOMAIN,amdc.m.taobao.com,extended-matching)),REJECT-DROP
 
 [URL Rewrite]
-# 菜鸟底部发现红点+顶部地址
-^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.tabbar\.marketing\.get\.cn\/1\.0 - reject
-^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.cncommunity\.station\.recommend\.index\.query\.cn\/1\.0 - reject
-# 知到更新弹窗
-;^http:\/\/base-config\.zhihuishu\.com\/app_2c\/common\/getIosStoreVersion - reject
-# 微博底部首页、超话、消息红点
-^https:\/\/api\.weibo\.cn\/2\/remind\/group_unread - reject
-^https:\/\/api\.weibo\.cn\/2\/remind\/unread_count - reject
 # 知乎关注红点
 ^https:\/\/api\.zhihu\.com\/moments\/tab_v2\?ab_param=only_dynamic&feed_type=recommend - reject
 ^https:\/\/api\.zhihu\.com\/moments\/tab_v2\?feed_type=recommend - reject
@@ -49,8 +41,6 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (DOMAIN,amdc.m.taobao.com
 ^https?:\/\/atrace.chelaile.net.cn\/adpub\/ - reject
 ^https?:\/\/atrace.chelaile.net.cn\/exhibit\?&adv_image - reject
 ^https?:\/\/pic1.chelaile.net.cn\/adv\/ - reject
-# 超星学习通
-^https?:\/\/learn\.chaoxing\.com\/apis\/service\/appConfig - reject
 # 刺猬猫阅读
 ^https?:\/\/app\.hbooker\.com\/setting\/get_startpage_url_list - reject
 # 美团
@@ -85,9 +75,6 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (DOMAIN,amdc.m.taobao.com
 ^https:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement - reject
 
 [Map Local]
-# b站动态红点
-^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.dynamic\.v1\.Dynamic\/DynRed data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-^https?:\/\/app\.bilibili\.com\/bilibili\.app\.dynamic\.v1\.Dynamic\/DynRed data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # 易校园
 ^https:\/\/compus\.xiaofubao\.com\/compus\/advertising\/getStartupAdvertising data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/compus\.xiaofubao\.com\/compus\/advertising\/getAdvertisingMap data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
@@ -127,4 +114,4 @@ Reddit = type=http-response,pattern=^https?:\/\/gql(-fed)?\.reddit\.com,requires
 pixivAds_18 = type=http-response,pattern=^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token),requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/pixivAds.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% compus.xiaofubao.com, ipv6.zyh365.com, y.gtimg.cn, portal.zjzwfw.gov.cn, cn-acs.m.cainiao.com, api.weibo.cn, api.zhihu.com, www.g.cn, www.google.cn, zh.m.wikipedia.org, api-new.app.acfun.cn, acs.m.taobao.com, appwk.baidu.com, *.chelaile.net.cn, *.chelaileapp.cn, learn.chaoxing.com, app.hbooker.com, peisongapi.meituan.com, img.meituan.net, s3plus.meituan.net, flowplus.meituan.net, p*.meituan.net, api.pinduoduo.com, api.yangkeduo.com, otheve.beacon.qq.com, client.app.coc.10086.cn, api.m.jd.com, bdsp-x.jd.com, dsp-x.jd.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, gw.alicdn.com, wallet.95516.com, wap.js.10086.cn, clientaccess.10086.cn, gql.reddit.com, home.mi.com, api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com, open.e.kuaishou.com, ad.12306.cn, oauth.secure.pixiv.net, gql-fed.reddit.com, m.baidu.com, www.baidu.com, grpc.biliapi.net, app.bilibili.com, zh.wikipedia.org, apiipv6.zyh365.com, heic.alicdn.com, guide-acs.m.taobao.com, dns.google, app.dewu.com
+hostname = %APPEND% compus.xiaofubao.com, ipv6.zyh365.com, y.gtimg.cn, portal.zjzwfw.gov.cn, api.zhihu.com, www.g.cn, www.google.cn, zh.m.wikipedia.org, api-new.app.acfun.cn, acs.m.taobao.com, appwk.baidu.com, *.chelaile.net.cn, *.chelaileapp.cn, app.hbooker.com, peisongapi.meituan.com, img.meituan.net, s3plus.meituan.net, flowplus.meituan.net, p*.meituan.net, api.pinduoduo.com, api.yangkeduo.com, otheve.beacon.qq.com, client.app.coc.10086.cn, api.m.jd.com, bdsp-x.jd.com, dsp-x.jd.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, gw.alicdn.com, wallet.95516.com, wap.js.10086.cn, clientaccess.10086.cn, gql.reddit.com, home.mi.com, api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com, open.e.kuaishou.com, ad.12306.cn, oauth.secure.pixiv.net, gql-fed.reddit.com, m.baidu.com, www.baidu.com, zh.wikipedia.org, apiipv6.zyh365.com, heic.alicdn.com, guide-acs.m.taobao.com, dns.google, app.dewu.com
