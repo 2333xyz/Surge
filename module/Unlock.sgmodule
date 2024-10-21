@@ -8,7 +8,6 @@
 百度文库=type=http-response,pattern=^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo,requires-body=1,script-path=https://github.com/deezertidal/private/raw/master/js-backup/Crack/baidulibrary.js
 美图秀秀=type=http-response,pattern=^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/,requires-body=1,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/MeiTuXiuXiu.js
 iScreen = type=http-response,pattern=^https:\/\/cs\.kuso\.xyz\/,requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/iScreen.js
-caiyun = type=http-response,pattern=^https:\/\/biz\.cyapi\.cn\/(p\/v1\/vip_info|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
 BaiduCloud = type=http-response,pattern=^https:\/\/pan\.baidu\.com\/((rest\/\d\.\d\/membership\/(volume|product|user))|cms\/config\?method=query|act\/v2\/skin\/(userset|inuse)|api\/user\/getinfo|wap\/vip\/memberChannel).*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/BDWP/BaiduCloud.js,script-update-interval=0
 WPSuperVIPuserCrack_11 = type=http-response, pattern=^https?:\/\/(account|drive|vas|userinfo.docer)\.wps\.cn\/(.*api\/(v3\/(mine\/vips|spaces)|users\/\d+\/overview|v1\/list_purchase_info)|user\/v1\/vip_dl_times), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/WPSuperVIPuserCrack.js, timeout=60, script-update-interval=0
 WPSuperVIPowerCrack_12 = type=http-request, pattern=^https?:\/\/(mobile|client|vas|download)(\.docer)?\.wps.cn\/(android\/mb\/buy_info|api\/v1\/mobile\/mb\/detail|query\/api\/v1\/list_privilege_info|download\/adapter\/v1\/mb), script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/WPSuperVIPowerCrack.js, timeout=60, script-update-interval=0
@@ -23,8 +22,6 @@ mojitianqi_8 = type=http-response, pattern=^https?:\/\/.*\.api\.moji\.com\/(sns\
 ^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 ^https?:\/\/update\.pan\.baidu\.com\/statistics\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 ^https:\/\/pan\.baidu\.com\/api\/getsyscfg\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\?app_name=weather&os_type=ios_pro&type_id=A09 data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json"
-^https?:\/\/api\.caiyunapp\.com\/v1\/activity data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 [MITM]
-hostname = %APPEND% aiqicha.baidu.com, appwk.baidu.com, h5.xiuxiu.meitu.com,api.xiuxiu.meitu.com, cs.kuso.xyz, biz.cyapi.cn, pan.baidu.com, update.pan.baidu.com, *.wps.cn, spclient.wg.spotify.com, *.api.moji.com, wrapper.cyapi.cn, api.caiyunapp.com
+hostname = %APPEND% aiqicha.baidu.com, appwk.baidu.com, h5.xiuxiu.meitu.com,api.xiuxiu.meitu.com, cs.kuso.xyz, pan.baidu.com, update.pan.baidu.com, *.wps.cn, spclient.wg.spotify.com, *.api.moji.com
