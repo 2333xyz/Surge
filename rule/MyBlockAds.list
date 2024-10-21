@@ -24,8 +24,6 @@ DOMAIN-SUFFIX,  pos.baidu.com
 IP-CIDR,  180.76.76.200/32
 
 # ======= C ======= #
-# ChatGPT
-DOMAIN,  o33249.ingest.sentry.io
 # Clue 智库
 DOMAIN, api.helloclue.com
 DOMAIN, brahe.apptimize.com
