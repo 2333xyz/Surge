@@ -8,7 +8,7 @@
 # b站谷歌dns请求
 URL-REGEX,^https:\/\/dns\.google\/resolve\?name=app\.bilibili\.com,REJECT
 # 高德/菜鸟 必须屏蔽
-AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (DOMAIN,amdc.m.taobao.com,extended-matching)),REJECT-DROP
+;AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (DOMAIN,amdc.m.taobao.com,extended-matching)),REJECT-DROP
 
 [URL Rewrite]
 # 知乎关注红点
