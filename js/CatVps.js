@@ -56,7 +56,7 @@ $httpClient.get(request, function(error, response, data) {
     panel.content = `统计时间：${Data.last_exec_time}\n` +
                  `出站: ${Data.out}` + '     |    ' + `总共: ${arg?.total}\n` +
                  `CPU: ${Data.cpu}` + '           |    ' + `内存: ${Data.mem}\n` +
-                 `服务到期时间：${arg?.ddl}`;
+                 `服务开始时间：${arg?.ddl}`;
         $done(panel);
     }
 });
